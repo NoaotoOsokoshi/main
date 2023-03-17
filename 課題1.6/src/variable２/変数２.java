@@ -1,4 +1,4 @@
-package 変数２;
+package variable２;
 
 import java.util.Random;
 
