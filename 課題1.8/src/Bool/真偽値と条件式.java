@@ -1,4 +1,4 @@
-package 真偽値と条件式;
+package Bool;
 
 public class 真偽値と条件式 {
 
