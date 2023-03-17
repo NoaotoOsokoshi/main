@@ -1,4 +1,4 @@
-package 変数１;
+package variable1;
 
 public class 変数１ {
 
