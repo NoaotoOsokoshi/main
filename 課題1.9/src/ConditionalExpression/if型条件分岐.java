@@ -1,4 +1,4 @@
-package if型条件分岐;
+package ConditionalExpression;
 
 import java.util.Random;
 
