@@ -1,6 +1,6 @@
-package for型反復処理;
+package ForLoop;
 
-public class for型反復処理2 {
+public class Practice2 {
 	/*	
 	問題.for文を使用して九九の計算を出力してください。
 		※出力例 	1×1=1 1×2=2…1×9=9

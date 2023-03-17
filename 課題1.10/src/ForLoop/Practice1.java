@@ -1,6 +1,6 @@
-package for型反復処理;
+package ForLoop;
 
-public class for型反復処理 {
+public class Practice1 {
 	/*
 	問題.for文を使用し、以下のプログラムを作成してください。
 		①変数iに1を代入
