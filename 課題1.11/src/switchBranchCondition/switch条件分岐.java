@@ -16,7 +16,7 @@ public class switch条件分岐 {
 	*/
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		int month = 2;
+		int month = 3;
 		switch (month) {
 		case 2:
 			System.out.println(month + "月は28日です。");
@@ -24,7 +24,7 @@ public class switch条件分岐 {
 		case 4, 6, 9, 11:
 			System.out.println(month + "月は30日です。");
 			break;
-		case 1, 3, 5, 7, 8, 10, 12:
+		default:
 			System.out.println(month + "月は31日です。");
 			break;
 		}
