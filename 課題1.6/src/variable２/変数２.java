@@ -38,7 +38,8 @@ public class 変数２ {
 //		あなたの年齢はおそらく〇〇歳ですね？
        Random random = new Random();
        int age = random.nextInt(101);
-       System.out.println(age);
+       System.out.println("あなたの年齢を予想します。");
+       System.out.println("あなたの年齢はおそらく"+age+"歳ですね？");
 	}
 
 }
