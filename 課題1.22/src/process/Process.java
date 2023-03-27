@@ -14,6 +14,7 @@ public class Process {
 			"今の現在日時は" + nowDate + "です"
 	};
 
+	
 	public void hello(String[] str) {
 		
 		for (int i = 0; i < this.str.length; i++) {
