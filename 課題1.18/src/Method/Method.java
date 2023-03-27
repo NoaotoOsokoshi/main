@@ -22,9 +22,9 @@ public class Method {
 		ramdomNum(6);
 		// Q6：Q5で作成した関数を用いて、このメソッド（関数）の引数をQ5のメソッド（関数）の引数に渡して
 		//     配列の要素の平均値を返すメソッド（関数）を作成してください。
-        ave(ramdomNum(5));
+		ave(ramdomNum(5));
 	}
-	
+
 	//Q1
 	public static void hello() {
 		System.out.println("Hello Java");
@@ -55,14 +55,14 @@ public class Method {
 		}
 		return value;
 	}
+
 	private static void ave(int[] value) {
 		int sum = 0;
-		
+
 		for (int i = 0; i < value.length; i++) {
 			sum += value[i];
 		}
-		System.out.println(sum/value.length);
+		System.out.println(sum / value.length);
 	}
-	
-	
+
 }
