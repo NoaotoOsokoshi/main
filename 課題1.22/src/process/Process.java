@@ -20,6 +20,8 @@ public class Process {
 		for (int i = 0; i < this.str.length; i++) {
 			if (this.str != null) {
 				System.out.println(this.str[i]);
+			}else {
+				System.out.println("エラー");
 			}
 		}
 	}
