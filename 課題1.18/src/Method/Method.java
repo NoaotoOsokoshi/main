@@ -19,10 +19,11 @@ public class Method {
 		//     ※ただしメソッド名はQ3のメソッド名と同じにしてください。
 		System.out.println(sum(3.5, 4.7));
 		// Q5：引数として数字を渡すと、1～100までのランダムな数字を引数の値分格納して返すメソッド（関数）を作成してください。
-		ramdomNum(6);
+		int [] array = ramdomNum(6);
+		
 		// Q6：Q5で作成した関数を用いて、このメソッド（関数）の引数をQ5のメソッド（関数）の引数に渡して
 		//     配列の要素の平均値を返すメソッド（関数）を作成してください。
-		ave(ramdomNum(5));
+		ave(array);
 	}
 
 	//Q1
@@ -37,12 +38,12 @@ public class Method {
 
 	//Q3
 	public static int sum(int num1, int num2) {
-		return num1 + num2;
+		return num1 * num2;
 	}
 
 	//Q4
 	public static double sum(double num1, double num2) {
-		return num1 + num2;
+		return num1 * num2;
 	}
 
 	//Q5
@@ -53,16 +54,18 @@ public class Method {
 			value[i] = random.nextInt(101);
 			System.out.println(value[i]);
 		}
-		return value;
+		return value ;
 	}
 
 	private static void ave(int[] value) {
 		int sum = 0;
-
+		double ave;
 		for (int i = 0; i < value.length; i++) {
 			sum += value[i];
 		}
-		System.out.println(sum / value.length);
+		ave = sum/value.length;
+		System.out.println(ave);
+		
 	}
 
 }
