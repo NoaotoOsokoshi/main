@@ -1,6 +1,10 @@
 package lnheritance;
 
 import data.Data;
+/**
+ * @author user
+ *
+ */
 public class Lenheritance {
 	/*
 	 
