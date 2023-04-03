@@ -38,7 +38,6 @@ public class Data {
 		this.name = name;
 	}
 
-	
 	public void status() {
 		System.out.println("こんにちは「" + this.name + "」さん");
 		System.out.println("ステータス");
@@ -49,19 +48,22 @@ public class Data {
 //super
 class statusHp {
 	int value;
+
 	public statusHp() {
 		Random random = new Random();
 		value = random.nextInt(1000);
 		System.out.println("HP:" + value);
+
 	}
 }
+
 //sub
 class statusMp extends statusHp {
-	
+
 	public statusMp() {
 		Random random = new Random();
 		value = random.nextInt(1000);
-		System.out.println("MP:"+value );
+		System.out.println("MP:" + value);
 	}
 }
 
@@ -69,7 +71,7 @@ class statusAttack extends statusMp {
 	public statusAttack() {
 		Random random = new Random();
 		value = random.nextInt(1000);
-		System.out.println("攻撃力:"+value );
+		System.out.println("攻撃力:" + value);
 	}
 }
 
@@ -77,7 +79,7 @@ class statusSpeed extends statusAttack {
 	public statusSpeed() {
 		Random random = new Random();
 		value = random.nextInt(1000);
-		System.out.println("素早さ:"+value );
+		System.out.println("素早さ:" + value);
 	}
 }
 
@@ -85,7 +87,7 @@ class statusDefence extends statusSpeed {
 	public statusDefence() {
 		Random random = new Random();
 		value = random.nextInt(1000);
-		System.out.println("防御力:"+value );
+		System.out.println("防御力:" + value);
 		System.out.println("");
 		System.out.println("さあ冒険に出かけよう！");
 	}
