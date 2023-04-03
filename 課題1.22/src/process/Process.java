@@ -15,7 +15,6 @@ public class Process {
 	};
 
 	public void hello(String[] str) {
-
 		for (int i = 0; i < this.str.length; i++) {
 			if (this.str != null) {
 				System.out.println(this.str[i]);
