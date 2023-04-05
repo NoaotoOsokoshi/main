@@ -2,6 +2,8 @@ package execution;
 
 import java.util.Scanner;
 
+import data.Data;
+
 public class Execution {
 	/*
 	 
@@ -44,13 +46,46 @@ public class Execution {
 	
 	*/
 	public static void main(String[] args) {
-		Scanner scanner  = new Scanner(System.in);
-		System.out.println(scanner);
-		 
-		
-		
-		
-		
+		Scanner scanner = new Scanner(System.in);
+		String line = scanner.nextLine();
+		//個体ごとのデータ
+		String[] aniData = line.split(",");
+		//名前、体長、速度に分ける
+		String[] name = new String[aniData.length];
+		double[] size = new double[aniData.length];
+		int[] speed = new int[aniData.length];
+
+		for (int i = 0; i < aniData.length; i++) {
+			String[] animal = aniData[i].split(":");
+
+			name[i] = animal[0];
+			size[i] = Double.parseDouble(animal[1]);
+			speed[i] = Integer.parseInt(animal[2]);
+
+			/*　確認
+			System.out.println(name[i]);
+			System.out.println(size[i]);
+			System.out.println(speed[i]);
+			*/
+		}
+		//学名
+		String[] scName = new String[6];
+		scName[0] = "パンテラ レオ";
+		scName[1] = "ロキソドンタ・サイクロティス";
+		scName[2] = "アイルロポダ・メラノレウカ";
+		scName[3] = "パン・トゥログロディテス";
+		scName[4] = "チャップマンシマウマ";
+		scName[5] = "不明";
+
+		//インスタンス
+		Data data = new Data();
+		data.setName(name);
+		data.setSize(size);
+		data.setSpeed(speed);
+		data.setScName(scName);
+
+		data.result();
+
 	}
 
 }

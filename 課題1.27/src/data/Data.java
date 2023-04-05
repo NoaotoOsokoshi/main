@@ -1,10 +1,10 @@
 package data;
 
 public class Data {
-	protected String[] name;
-	protected double[] size;
-	protected int[] speed;
-	protected String[] scientificName;
+	protected static String[] name;
+	protected static double[] size;
+	protected static int[] speed;
+	protected static String[] scName;
 
 	public String[] getName() {
 		return name;
@@ -30,38 +30,41 @@ public class Data {
 		this.speed = speed;
 	}
 
-	public String[] getScientificName() {
-		return scientificName;
+	public String[] getScName() {
+		return scName;
 	}
 
-	public void setScientificName(String[] scientificName) {
-		this.scientificName = scientificName;
+	public void setScName(String[] scientificName) {
+		this.scName = scientificName;
 	}
 
-}
-
-class Name extends Data {
-	int i;
-
-	public void animalName(int i) {
-		System.out.println("動物名：" + name[i]);
+	public void result() {
+		System.out.println("コンソールに文字を入力してください");
+		Animal animal = new Animal();
+		animal.ani();
 	}
 }
 
-class Size extends Name {
-	public void animalSize(int i) {
-		System.out.println("体長：" + size[i] + "");
-	}
-}
+class Animal extends Data {
+	String[] name = Data.name;
+	double[] size = Data.size;
+	int[] speed = Data.speed;
+	String[] scName = Data.scName;
 
-class Speed extends Size {
-	public void animalSpeed(int i) {
-		System.out.println("時速" + speed[i] + "km/h");
+	public void ani() {
+		String strSize = String.valueOf(size);
+		String strSpeed = String.valueOf(speed);
+		if (name != null && strSize != null && strSpeed != null) {
+			for (int i = 0; i < 6; i++) {
+				System.out.println("動物名:" + name[i]);
+				System.out.println("体長:" + size[i] + "m");
+				System.out.println("時速:" + speed[i] + "km/h");
+				System.out.println("学名:" + scName[i]);
+				System.out.println("");
+			}
+		} else {
+			System.out.println("エラー");
+		}
 	}
-}
 
-class ScientificName extends Speed{
-	public void animalScientificName(int i) {
-		System.out.println("学名" + scientificName[i]);
-	}
 }
