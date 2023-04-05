@@ -41,7 +41,7 @@ public class Data {
 	public void status() {
 		System.out.println("こんにちは「" + this.name + "」さん");
 		System.out.println("ステータス");
-		statusMp status = new statusDefence();
+		statusDefence status = new statusDefence();
 	}
 }
 
