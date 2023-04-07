@@ -22,7 +22,7 @@ public class Execution {
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 		Process process = new Process();
-		process.print();
+		process.hello();
 	}
 
 }

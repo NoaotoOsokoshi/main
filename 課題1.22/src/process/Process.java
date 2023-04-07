@@ -17,24 +17,32 @@ public class Process {
 	
 	String food;
 	String jp;
-
 	
+	public void hello() {
+		str();
+		food = "寿司";
+		jp= "和食";
+		print();
+	}
+
+	public void str() {
+		food = "";
+		jp= "";
+	}
 
 	public void print() {
-		
+		System.out.println("こんにちは！ここは日本です！");
 				System.out.println(getFood());
 				System.out.println(getJp());
 				System.out.println(getTime());
 			
 		}
 	public String getFood() {
-		food = "寿司";
-		jp= "和食";
-		return "この"+food+"はうまい";
+		return "この"+this.food+"はうまい";
 	}
 	
 	public String getJp() {
-		return food+"は"+jp+"です";
+		return food+"は"+this.jp+"です";
 	}
 	
 	public String getTime() {
