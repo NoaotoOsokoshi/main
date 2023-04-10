@@ -65,7 +65,6 @@ class Data extends Sort {
 }
 
 //表示
-
 /*例
  * 都道府県名：山形県
 			県庁所在地：山形市
