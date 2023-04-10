@@ -44,6 +44,7 @@ public class Data {
 			System.out.println("体長：" + size + "m");
 			System.out.println("速度：" + speed + "km/h");
 		}else {
+			
 			System.out.println("エラーです");
 		}
 		
