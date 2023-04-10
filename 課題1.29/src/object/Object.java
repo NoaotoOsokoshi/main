@@ -69,7 +69,9 @@ public class Object {
 		//int[]に変換
 		for (int i = 0; i < 3; i++) {
 			num[i] = Integer.parseInt(str[i]);
-			System.out.println(num[i]);
+			
+			//確認
+			//System.out.println(num[i]);
 		}
 
 		Process process = new Process();
