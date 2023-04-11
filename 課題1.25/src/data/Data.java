@@ -37,10 +37,11 @@ public class Data {
 	public void setName(String name) {
 		this.name = name;
 	}
-
+//出力
 	public void status() {
 		System.out.println("こんにちは「" + this.name + "」さん");
 		System.out.println("ステータス");
+		//インストラクタ
 		statusDefence status = new statusDefence();
 	}
 }
@@ -48,7 +49,7 @@ public class Data {
 //super
 class statusHp {
 	int value;
-
+//コンストラクタ
 	public statusHp() {
 		Random random = new Random();
 		value = random.nextInt(1000);
@@ -57,9 +58,9 @@ class statusHp {
 	}
 }
 
-//sub
+//sub　
 class statusMp extends statusHp {
-
+	//コンストラクタ
 	public statusMp() {
 		Random random = new Random();
 		value = random.nextInt(1000);
@@ -68,6 +69,7 @@ class statusMp extends statusHp {
 }
 
 class statusAttack extends statusMp {
+	//コンストラクタ
 	public statusAttack() {
 		Random random = new Random();
 		value = random.nextInt(1000);
@@ -76,6 +78,7 @@ class statusAttack extends statusMp {
 }
 
 class statusSpeed extends statusAttack {
+	//コンストラクタ
 	public statusSpeed() {
 		Random random = new Random();
 		value = random.nextInt(1000);
@@ -84,6 +87,7 @@ class statusSpeed extends statusAttack {
 }
 
 class statusDefence extends statusSpeed {
+	//コンストラクタ
 	public statusDefence() {
 		Random random = new Random();
 		value = random.nextInt(1000);
