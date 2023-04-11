@@ -31,6 +31,7 @@ public class Lenheritance {
 	 */
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
+		
 		Data data = new Data();
 		data.setName("獺越");
 		data.status();
