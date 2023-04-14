@@ -66,7 +66,7 @@ class Status extends Value {
 	//コンストラクタ
 	
 	public Status() {
-		Value.ramValue();
+		ramValue();
 		System.out.println("HP:" + value[0]);
 		System.out.println("MP:" + value[1]);
 		System.out.println("攻撃力:" + value[2]);
@@ -77,52 +77,3 @@ class Status extends Value {
 	}
 }
 
-/*
-class statusHp {
-	int value;
-//コンストラクタ
-	public statusHp() {
-		Random random = new Random();
-		value = random.nextInt(1000);
-		System.out.println("HP:" + value);
-
-	}
-}
-
-　
-class statusMp extends statusHp {
-	//コンストラクタ
-	public statusMp() {
-		Random random = new Random();
-		value = random.nextInt(1000);
-		System.out.println("MP:" + value);
-	}
-}
-
-class statusAttack extends statusMp {
-	//コンストラクタ
-	public statusAttack() {
-		Random random = new Random();
-		value = random.nextInt(1000);
-		System.out.println("攻撃力:" + value);
-	}
-}
-
-class statusSpeed extends statusAttack {
-	//コンストラクタ
-	public statusSpeed() {
-		Random random = new Random();
-		value = random.nextInt(1000);
-		System.out.println("素早さ:" + value);
-	}
-}
-
-class statusDefence extends statusSpeed {
-	//コンストラクタ
-	public statusDefence() {
-		Random random = new Random();
-		value = random.nextInt(1000);
-		System.out.println("防御力:" + value);
-		System.out.println("");
-		System.out.println("さあ冒険に出かけよう！");
-	}*/
