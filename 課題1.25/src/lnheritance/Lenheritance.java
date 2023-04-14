@@ -35,7 +35,8 @@ public class Lenheritance {
 		Data data = new Data();
 		data.setName("獺越");
 		data.status();
-
+		
+		
 	}
 
 }

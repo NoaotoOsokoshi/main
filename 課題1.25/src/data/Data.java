@@ -37,16 +37,47 @@ public class Data {
 	public void setName(String name) {
 		this.name = name;
 	}
-//出力
+
+	//出力
 	public void status() {
 		System.out.println("こんにちは「" + this.name + "」さん");
 		System.out.println("ステータス");
 		//インストラクタ
-		statusDefence status = new statusDefence();
+		Status status = new Status();
 	}
+	
 }
 
 //super
+
+class Value {
+	static int[] value = new int[5];
+
+	public static int[] ramValue() {
+		for (int i = 0; i < 5; i++) {
+			Random random = new Random();
+			value[i] = random.nextInt(1000);
+		}
+		return value;
+	}
+}
+//sub
+class Status extends Value {
+	//コンストラクタ
+	
+	public Status() {
+		Value.ramValue();
+		System.out.println("HP:" + value[0]);
+		System.out.println("MP:" + value[1]);
+		System.out.println("攻撃力:" + value[2]);
+		System.out.println("素早さ:" + value[3]);
+		System.out.println("防御力:" + value[4]);
+		System.out.println("");
+		System.out.println("さあ冒険に出かけよう！");
+	}
+}
+
+/*
 class statusHp {
 	int value;
 //コンストラクタ
@@ -58,7 +89,7 @@ class statusHp {
 	}
 }
 
-//sub　
+　
 class statusMp extends statusHp {
 	//コンストラクタ
 	public statusMp() {
@@ -94,5 +125,4 @@ class statusDefence extends statusSpeed {
 		System.out.println("防御力:" + value);
 		System.out.println("");
 		System.out.println("さあ冒険に出かけよう！");
-	}
-}
+	}*/
