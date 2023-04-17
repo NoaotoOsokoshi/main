@@ -48,8 +48,10 @@ public class Execution {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		String line = scanner.nextLine();
+		
 		//個体ごとのデータ
 		String[] aniData = line.split(",");
+		
 		//名前、体長、速度に分ける
 		String[] name = new String[aniData.length];
 		double[] size = new double[aniData.length];

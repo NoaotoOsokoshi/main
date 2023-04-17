@@ -1,0 +1,21 @@
+package introduction;
+
+public class vehicle {
+private String owner;
+
+public String getOwner() {
+	return owner;
+}
+
+public void setOwner(String owner) {
+	this.owner = owner;
+}
+}
+
+class Car extends vehicle{
+	
+}
+
+class Bicycle extends vehicle{
+	
+}

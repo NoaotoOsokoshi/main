@@ -51,6 +51,7 @@ class Animal extends Data {
 	int[] speed = Data.speed;
 	String[] scName = Data.scName;
 
+	//処理
 	public void ani() {
 		String strSize = String.valueOf(size);
 		String strSpeed = String.valueOf(speed);
