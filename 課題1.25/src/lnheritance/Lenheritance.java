@@ -1,5 +1,7 @@
 package lnheritance;
 
+import java.util.Scanner;
+
 import data.Data;
 /**
  * @author user
@@ -31,8 +33,10 @@ public class Lenheritance {
 	 */
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		String name = null;
-		name = "名前";
+		//コンソールから獲得
+		Scanner scanner = new Scanner(System.in);
+		String name = scanner.nextLine();
+		
 		
 		Data data = new Data();
 		data.setName(name);

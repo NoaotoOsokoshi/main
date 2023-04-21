@@ -49,10 +49,9 @@ public class Data {
 }
 
 //super
-
 class Value {
 	static int[] value = new int[5];
-
+	//乱数の獲得
 	public static int[] ramValue() {
 		for (int i = 0; i < 5; i++) {
 			Random random = new Random();
@@ -64,7 +63,7 @@ class Value {
 //sub
 class Status extends Value {
 	//コンストラクタ
-	
+	//表示
 	public Status() {
 		ramValue();
 		System.out.println("HP:" + value[0]);
