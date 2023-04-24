@@ -15,7 +15,9 @@ public class Main {
 		Bicycle bicycle = new Bicycle();
 
 		//owener 設定
+		//car person1
 		car.setOwner(person1.name);
+		//bicycle person2
 		bicycle.setOwner(person2.name);
 
 		System.out.println(car.getOwner());

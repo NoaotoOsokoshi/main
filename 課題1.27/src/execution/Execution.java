@@ -46,17 +46,19 @@ public class Execution {
 	
 	*/
 	public static void main(String[] args) {
+		//　コンソールから獲得
 		Scanner scanner = new Scanner(System.in);
 		String line = scanner.nextLine();
-		
-		//個体ごとのデータ
+
+		//　個体ごとのデータ ","で区切る
 		String[] aniData = line.split(",");
-		
-		//名前、体長、速度に分ける
+
+		//　名前、体長、速度に分ける
 		String[] name = new String[aniData.length];
 		double[] size = new double[aniData.length];
 		int[] speed = new int[aniData.length];
-
+		
+		//　　":"で区切る
 		for (int i = 0; i < aniData.length; i++) {
 			String[] animal = aniData[i].split(":");
 
@@ -70,7 +72,7 @@ public class Execution {
 			System.out.println(speed[i]);
 			*/
 		}
-		//学名
+		//　学名
 		String[] scName = new String[6];
 		scName[0] = "パンテラ レオ";
 		scName[1] = "ロキソドンタ・サイクロティス";
@@ -79,7 +81,7 @@ public class Execution {
 		scName[4] = "チャップマンシマウマ";
 		scName[5] = "不明";
 
-		//インスタンス
+		//　インスタンス
 		Data data = new Data();
 		data.setName(name);
 		data.setSize(size);

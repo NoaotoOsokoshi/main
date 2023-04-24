@@ -20,7 +20,7 @@ public class Person {
 	//メソッドbmi 戻り値:double
 	public double bmi() {
 
-		//BMI 計算　体重/(身長)*(身長)
+		//BMI 計算　体重/(身長)/(身長)
 		double BMI = weight / height / height;
 		//戻り値
 		return this.BMI = BMI;
