@@ -14,14 +14,18 @@ public class Main {
 		Car car = new Car();
 		Bicycle bicycle = new Bicycle();
 
-		//owener 設定
-		//car person1
+		// owener 設定
+		// car person1
 		car.setOwner(person1.name);
-		//bicycle person2
+		// bicycle person2
 		bicycle.setOwner(person2.name);
 
 		System.out.println(car.getOwner());
 		System.out.println(bicycle.getOwner());
+		
+		//　buyメソッド　
+		person1.buy(car);
+		person2.buy(bicycle);
 
 	}
 

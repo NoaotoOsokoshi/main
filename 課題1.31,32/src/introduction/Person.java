@@ -17,16 +17,16 @@ public class Person {
 		print();
 	}
 
-	//メソッドbmi 戻り値:double
+	// メソッドbmi 戻り値:double
 	public double bmi() {
 
-		//BMI 計算　体重/(身長)/(身長)
+		// BMI 計算　体重/(身長)/(身長)
 		double BMI = weight / height / height;
-		//戻り値
+		// 戻り値
 		return this.BMI = BMI;
 	}
 
-	//表示
+	// 表示
 	public void print() {
 		bmi();
 		System.out.println("名前は" + this.name + "です");
@@ -34,13 +34,13 @@ public class Person {
 		System.out.println("BMIは" + String.format("%.1f", this.BMI) + "です");
 	}
 
-	//インスタンスメソッド　buy 引数　car
+	// インスタンスメソッド　buy 引数　car
 	public void buy(Car car) {
 		car.setOwner(this.name);
 		System.out.println(car.getOwner()+"が購入しました");
 	}
 
-	//インスタンスメソッド　buy 引数　bicycle
+	// インスタンスメソッド　buy 引数　bicycle
 	public void buy(Bicycle bicycle) {
 		bicycle.setOwner(this.name);
 		System.out.println(bicycle.getOwner()+"が購入しました");

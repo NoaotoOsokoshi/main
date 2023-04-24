@@ -12,12 +12,12 @@ public class vehicle {
 	}
 }
 
-//継承　サブ
+// 継承　サブ
 class Car extends vehicle {
 
 }
 
-//継承　サブ
+// 継承　サブ
 class Bicycle extends vehicle {
 
 }
