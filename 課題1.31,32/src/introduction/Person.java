@@ -14,7 +14,7 @@ public class Person {
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
-		print();
+		//print();
 	}
 
 	// メソッドbmi 戻り値:double
@@ -26,13 +26,13 @@ public class Person {
 		return this.BMI = BMI;
 	}
 
-	// 表示
+	/* 表示
 	public void print() {
 		bmi();
 		System.out.println("名前は" + this.name + "です");
 		System.out.println("年は" + this.age + "です");
 		System.out.println("BMIは" + String.format("%.1f", this.BMI) + "です");
-	}
+	}*/
 
 	// インスタンスメソッド　buy 引数　car
 	public void buy(Car car) {
