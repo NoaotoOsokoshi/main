@@ -71,62 +71,41 @@ class Animal extends Data {
 		//　nullチェック
 		if (name != null && strSize != null && strSpeed != null) {
 			for (int i = 0; i < 6; i++) {
-
+				System.out.println("動物名:" + name[i]);
+				System.out.println("体長:" + size[i] + "m");
+				System.out.println("時速:" + speed[i] + "km/h");
 				switch (name[i]) {
 				//name ライオンの場合
 				case "ライオン":
-					System.out.println("動物名:" + name[i]);
-					System.out.println("体長:" + size[i] + "m");
-					System.out.println("時速:" + speed[i] + "km/h");
 					System.out.println("学名:" + scName[0]);
-					System.out.println("");
 					break;
 
 				//name ゾウの場合
 				case "ゾウ":
-					System.out.println("動物名:" + name[i]);
-					System.out.println("体長:" + size[i] + "m");
-					System.out.println("時速:" + speed[i] + "km/h");
 					System.out.println("学名:" + scName[1]);
-					System.out.println("");
 					break;
 
 				//name パンダの場合
 				case "パンダ":
-					System.out.println("動物名:" + name[i]);
-					System.out.println("体長:" + size[i] + "m");
-					System.out.println("時速:" + speed[i] + "km/h");
 					System.out.println("学名:" + scName[2]);
-					System.out.println("");
 					break;
 
 				//name チンパンジーの場合
 				case "チンパンジー":
-					System.out.println("動物名:" + name[i]);
-					System.out.println("体長:" + size[i] + "m");
-					System.out.println("時速:" + speed[i] + "km/h");
 					System.out.println("学名:" + scName[3]);
-					System.out.println("");
 					break;
 
 				//name シマウマの場合
 				case "シマウマ":
-					System.out.println("動物名:" + name[i]);
-					System.out.println("体長:" + size[i] + "m");
-					System.out.println("時速:" + speed[i] + "km/h");
 					System.out.println("学名:" + scName[4]);
-					System.out.println("");
 					break;
 
 				//name インコの場合
 				case "インコ":
-					System.out.println("動物名:" + name[i]);
-					System.out.println("体長:" + size[i] + "m");
-					System.out.println("時速:" + speed[i] + "km/h");
 					System.out.println("学名:" + scName[5]);
-					System.out.println("");
 					break;
 				}
+				System.out.println("");
 			}
 		} else {
 			System.out.println("エラー");
