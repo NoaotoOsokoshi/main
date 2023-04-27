@@ -6,28 +6,28 @@ public class Process {
 	static String[] place;
 	static int[] num;
 
-	//　getter num
+	// getter num
 	public int[] getNum() {
 		return num;
 	}
 
-	//　setter num
+	// setter num
 	public void setNum(int[] num) {
 		this.num = num;
 	}
 
-	//　getter place
+	// getter place
 	public String[] getPlace() {
 		return place;
 	}
 
-	//　setter place
+	// setter place
 	public void setPlace(String[] place) {
 		this.place = place;
 	}
 
 	public void result() {
-		//　インストラクタ
+		// インストラクタ
 		Print print = new Print();
 	}
 
@@ -50,15 +50,15 @@ class Sort {
 	}
 }
 
-//　 継承　サブ　　分割,表示
+//  継承　サブ　　分割,表示
 class Data extends Sort {
 	// 都道府県名
 	String[] prefecture = new String[sortPlace.length];
 
-	//　県庁所在地
+	// 県庁所在地
 	String[] capital = new String[sortPlace.length];
 
-	//　面積
+	// 面積
 	Double[] size = new Double[sortPlace.length];
 
 	public Data() {
