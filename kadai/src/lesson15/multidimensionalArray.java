@@ -1,4 +1,4 @@
-package multidimensionalArray;
+package lesson15;
 
 public class multidimensionalArray {
 	/*

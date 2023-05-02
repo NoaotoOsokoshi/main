@@ -1,4 +1,4 @@
-package DataTypeAndMemory;
+package lesson16;
 
 public class DataTypeAndMemory {
 
