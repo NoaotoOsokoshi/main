@@ -46,8 +46,7 @@ class Person {
 		this.weight = weight;
 	}
 
-	//クラスフィールド
-	int count;
+	static int count;
 
 	//コンストラクタ
 	Person(String name, int age, double height, double weight) {
@@ -55,7 +54,7 @@ class Person {
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
-		count = count+1; 
+		Person.count = count+1; 
 	}
 
 	//bmi 計算
