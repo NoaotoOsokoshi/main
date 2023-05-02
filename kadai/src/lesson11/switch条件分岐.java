@@ -1,4 +1,4 @@
-package switchBranchCondition;
+package lesson11;
 
 public class switch条件分岐 {
 	/*

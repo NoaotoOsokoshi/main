@@ -1,4 +1,4 @@
-package whileRepeat;
+package lesson12;
 
 public class while型反復条件 {
 	/*
