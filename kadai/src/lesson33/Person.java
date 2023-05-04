@@ -7,27 +7,31 @@ class Person {
 	public int age;
 	public double height, weight;
 
+	//getter count
 	public static int getCount() {
 		return count;
 	}
-
+//setter count
 	public static void setCount(int count) {
 		Person.count = count;
 	}
 
+	//getter name
 	public String getName() {
 		return name;
 	}
 
-
+//setter name
 	public void setName(String lastName) {
 		this.name = lastName;
 	}
 
+	//getter age
 	public int getAge() {
 		return age;
 	}
 
+	
 	public void setAge(int age) {
 		this.age = age;
 	}
