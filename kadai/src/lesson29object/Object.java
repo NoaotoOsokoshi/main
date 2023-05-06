@@ -61,14 +61,13 @@ public class Object {
 
 		//コンソールから獲得
 		Scanner scanner = new Scanner(System.in);
-		String[] str = new String[3];
-		str[0] = scanner.nextLine();
-		str[1] = scanner.nextLine();
-		str[2] = scanner.nextLine();
+		String line = scanner.nextLine();
+		//","で区切る
+		String[] str = line.split(",");;
 
-		int[] num = new int[3];
+		int[] num = new int[str.length];
 		//int[]に変換
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < num.length; i++) {
 			num[i] = Integer.parseInt(str[i]);
 			
 			//確認
@@ -78,7 +77,10 @@ public class Object {
 		Process process = new Process();
 		process.setPlace(place);
 		process.setNum(num);
-		process.result();
+		//降順
+		process.resultDown();
+		//昇順
+		process.resultUp();
 	}
 
 }

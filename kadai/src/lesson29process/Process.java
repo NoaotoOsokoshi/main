@@ -26,9 +26,14 @@ public class Process {
 		this.place = place;
 	}
 
-	public void result() {
+	public void resultDown() {
 		// インストラクタ
 		Print print = new Print();
+	}
+	
+	public void resultUp() {
+		// インストラクタ
+		Print2 print2 = new Print2();
 	}
 
 }
@@ -37,16 +42,30 @@ class Sort {
 	int[] num = Process.num;
 	String[] place = Process.place;
 	String[] sortPlace = new String[num.length];
+	String[] sortPlace2 = new String[num.length];
 
 	public Sort() {
 
-		//並び替え
+		//並び替え（昇順）
 		Arrays.sort(num);
 
-		//並び替えた順でplaceを格納
+		//並び替えた順でplaceを格納（昇順）
 		for (int i = 0; i < num.length; i++) {
 			sortPlace[i] = place[num[i]];
 		}
+
+		//並び替え　（降順）
+		for (int f = 0, l = num.length - 1; f < l; f++, l--) {
+			int down = num[f];
+			num[f] = num[l];
+			num[l] = down;
+		}
+
+		//並び替えた順でplaceを格納（降順）
+		for (int i = 0; i < num.length; i++) {
+			sortPlace2[i] = place[num[i]];
+		}
+
 	}
 }
 
@@ -54,15 +73,18 @@ class Sort {
 class Data extends Sort {
 	// 都道府県名
 	String[] prefecture = new String[sortPlace.length];
+	String[] prefecture2 = new String[sortPlace2.length];
 
 	// 県庁所在地
 	String[] capital = new String[sortPlace.length];
+	String[] capital2 = new String[sortPlace2.length];
 
 	// 面積
 	Double[] size = new Double[sortPlace.length];
+	Double[] size2 = new Double[sortPlace2.length];
 
 	public Data() {
-		//nullチェック
+		//nullチェック 降順
 		if (sortPlace != null) {
 			for (int j = 0; j < sortPlace.length; j++) {
 				// ":"で分ける　[0]都道府県　[1]県庁所在地　[2]面積
@@ -70,6 +92,19 @@ class Data extends Sort {
 				prefecture[j] = data[0];
 				capital[j] = data[1];
 				size[j] = Double.parseDouble(data[2]);
+			}
+		} else {
+			System.out.println("エラー");
+		}
+
+		//nullチェック 昇順
+		if (sortPlace2 != null) {
+			for (int j = 0; j < sortPlace2.length; j++) {
+				// ":"で分ける　[0]都道府県　[1]県庁所在地　[2]面積
+				String[] data = sortPlace2[j].split(":");
+				prefecture2[j] = data[0];
+				capital2[j] = data[1];
+				size2[j] = Double.parseDouble(data[2]);
 			}
 		} else {
 			System.out.println("エラー");
@@ -88,13 +123,24 @@ class Data extends Sort {
  */
 class Print extends Data {
 	public Print() {
-		//Dataで分けたものを表示
+		//Dataで分けたものを表示(降順)
 		for (int k = 0; k < prefecture.length; k++) {
 			System.out.println("都道府県名：" + prefecture[k]);
 			System.out.println("県庁所在地:" + capital[k]);
 			System.out.println("面積:" + size[k] + "km2");
 			System.out.println("");
+		}
+	}
+}
 
+class Print2 extends Data {
+	public Print2() {
+		//Dataで分けたものを表示(昇順)
+		for (int k = 0; k < prefecture2.length; k++) {
+			System.out.println("都道府県名：" + prefecture2[k]);
+			System.out.println("県庁所在地:" + capital2[k]);
+			System.out.println("面積:" + size2[k] + "km2");
+			System.out.println("");
 		}
 	}
 }
