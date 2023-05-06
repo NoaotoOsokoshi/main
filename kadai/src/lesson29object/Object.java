@@ -59,7 +59,7 @@ public class Object {
 		place[9] = "群馬県:前橋市:6362";
 		place[10] = "埼玉県:さいたま市:3798";
 
-		//コンソールから獲得
+		//コンソールから獲得 
 		Scanner scanner = new Scanner(System.in);
 		String line = scanner.nextLine();
 		//","で区切る
