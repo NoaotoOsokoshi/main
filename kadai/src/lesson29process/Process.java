@@ -54,7 +54,7 @@ class Sort {
 			sortPlace[i] = place[num[i]];
 		}
 
-		//並び替え　（降順）
+		//並び替え（降順）
 		for (int f = 0, l = num.length - 1; f < l; f++, l--) {
 			int down = num[f];
 			num[f] = num[l];
