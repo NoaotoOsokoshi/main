@@ -132,8 +132,95 @@ public class Qes1_13 {
 		ただし計算は数値を直書きせず、全て変数を使ってすること			
 		
 		 */
+
+		System.out.println("BMIは" + String.format("%.1f", weight / (height / 100) / (height / 100)) + "です");
+		System.out.println("");
+		/*
+		 * 8				
+		6で宣言した変数に再代入し下記の通りコンソールに出力してください			
+		　初めまして鈴木一郎です			
+		　年齢は24歳です			
+		　身長168.5cmです			
+		　体重は64.2kgです			
+		　好きな食べ物はオムライスです			
+		　BMIは22.6です					
+		 */
+
+		name = "鈴木一郎";
+		age = 24;
+		height = 168.5;
+		weight = 64.2;
+		food = "オムライス";
+
+		System.out.println("初めまして" + name + "です");
+		System.out.println("年齢は" + age + "歳です");
+		System.out.println("身長は" + height + "cmです");
+		System.out.println("身長は" + weight + "kgです");
+		System.out.println("好きな食べ物は" + food + "です");
+		System.out.println("BMIは" + String.format("%.1f", weight / (height / 100) / (height / 100)) + "です");
+		System.out.println("");
+
+		/*
+		 * 9				
+		8で使用した変数【年齢・身長・体重】の数値を和算で自己代入し、下記の通りコンソールに出力してください			
+		　初めまして鈴木一郎です			
+		　年齢は48歳です			
+		　身長337.0cmです			
+		　体重は128.4kgです			
+		　好きな食べ物はオムライスです			
+		　BMIは11.31です			
+		 */
+
+		age += age;
+		height += height;
+		weight += weight;
+
+		System.out.println("初めまして" + name + "です");
+		System.out.println("年齢は" + age + "歳です");
+		System.out.println("身長は" + height + "cmです");
+		System.out.println("身長は" + weight + "kgです");
+		System.out.println("好きな食べ物は" + food + "です");
+		System.out.println("BMIは" + String.format("%.1f", weight / (height / 100) / (height / 100)) + "です");
+		System.out.println("");
+
+		/*
+		10				
+		8で使用した年齢が25歳以上ならtrueが出力されるようにしてください。ただしif文は使いません			
+		*/
+		age = 24;
+		height = 168.5;
+		weight = 64.2;
+
+		bo = (age >= 25);
+		System.out.println(bo);
+
+		/*
+		11				
+		8で使用した【年齢・身長・体重】を文字列型に型変換し繋げて出力してください			
+		*/
+		String strAge = String.valueOf(age);
+		String strHeight = String.valueOf(height);
+		String strWeight = String.valueOf(weight);
+		System.out.println(strAge + strHeight + strWeight);
+
+		/*	
+		12				
+		11で変換した【年齢・身長】を整数型に変換して出力してください			
+		*/
+		int intAge = Integer.valueOf(strAge);
+		System.out.println(intAge);
+		double douHeight = Double.parseDouble(strHeight);
+		int intHeight = (int) douHeight;
+		System.out.println(intHeight);
+
+		/*
+		13				
+		12で変換した【年齢・身長】で【年齢が25もしくは身長が160以上】であればtrueを出力してください			
+		ただしif文は使わないでください			
+		 */
 		
-		System.out.println("BMIは"+weight/(height/100)/(height/100)+"です");
+		bo = (intAge == 25 ||intHeight >= 160);
+		System.out.println(bo);
 	}
 
 }
