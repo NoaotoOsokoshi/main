@@ -7,6 +7,8 @@ public class Person {
 	double height;
 	double weight;
 	double BMI;
+	
+	static int count;
 
 	// コンストラクタを定義しインスタンスフィールドに値をセット
 	Person(String name, int age, double height, double weight) {
@@ -14,9 +16,12 @@ public class Person {
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
+		Person.count = count+1; 
 		print();
 	}
 
+	
+	
 	// メソッドbmi 戻り値:double
 	public double bmi() {
 
@@ -32,6 +37,7 @@ public class Person {
 		System.out.println("名前は" + this.name + "です");
 		System.out.println("年は" + this.age + "です");
 		System.out.println("BMIは" + String.format("%.1f", this.BMI) + "です");
+		System.out.println("合計"+count+"人です");
 	}
 }
 
