@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class Process {
 	static String[] place;
 	static int[] num;
+	static String sort;
 
 	// getter num
 	public int[] getNum() {
@@ -13,7 +14,7 @@ public class Process {
 
 	// setter num
 	public void setNum(int[] num) {
-		this.num = num;
+		Process.num = num;
 	}
 
 	// getter place
@@ -23,10 +24,26 @@ public class Process {
 
 	// setter place
 	public void setPlace(String[] place) {
-		this.place = place;
+		Process.place = place;
 	}
 
-	public void resultDown() {
+	//getter sort
+	public static String getSort() {
+		return sort;
+	}
+
+	//setter sort
+	public void setSort(String sort) {
+		Process.sort = sort;
+	}
+
+	public void result() {
+		System.out.println(Process.sort);
+		Print print = new Print();
+
+	}
+
+	/*public void resultDown() {
 		// インストラクタ
 		Print print = new Print();
 	}
@@ -34,7 +51,7 @@ public class Process {
 	public void resultUp() {
 		// インストラクタ
 		Print2 print2 = new Print2();
-	}
+	}*/
 
 }
 
@@ -43,6 +60,7 @@ class Sort {
 	String[] place = Process.place;
 	String[] sortPlace = new String[num.length];
 	String[] sortPlace2 = new String[num.length];
+	String sort = Process.sort;
 
 	public Sort() {
 
@@ -123,24 +141,24 @@ class Data extends Sort {
  */
 class Print extends Data {
 	public Print() {
-		//Dataで分けたものを表示(降順)
-		for (int k = 0; k < prefecture.length; k++) {
-			System.out.println("都道府県名：" + prefecture[k]);
-			System.out.println("県庁所在地:" + capital[k]);
-			System.out.println("面積:" + size[k] + "km2");
-			System.out.println("");
-		}
-	}
-}
-
-class Print2 extends Data {
-	public Print2() {
-		//Dataで分けたものを表示(昇順)
-		for (int k = 0; k < prefecture2.length; k++) {
-			System.out.println("都道府県名：" + prefecture2[k]);
-			System.out.println("県庁所在地:" + capital2[k]);
-			System.out.println("面積:" + size2[k] + "km2");
-			System.out.println("");
+		if (sort.equals("降順")) {
+			//Dataで分けたものを表示(降順)
+			for (int k = 0; k < prefecture.length; k++) {
+				System.out.println("都道府県名：" + prefecture[k]);
+				System.out.println("県庁所在地:" + capital[k]);
+				System.out.println("面積:" + size[k] + "km2");
+				System.out.println("");
+			}
+		} else if (sort .equals("昇順")){
+			//Dataで分けたものを表示(昇順)
+			for (int k = 0; k < prefecture2.length; k++) {
+				System.out.println("都道府県名：" + prefecture2[k]);
+				System.out.println("県庁所在地:" + capital2[k]);
+				System.out.println("面積:" + size2[k] + "km2");
+				System.out.println("");
+			}
+		} else {
+			System.out.println("数字の後に昇順か降順かを入力してください");
 		}
 	}
 }

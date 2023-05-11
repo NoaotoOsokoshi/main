@@ -70,14 +70,18 @@ public class Object {
 		for (int i = 0; i < num.length; i++) {
 			num[i] = Integer.parseInt(str[i]);
 		}
+		
+		//昇順か降順かを獲得
+		Scanner scanner2 = new Scanner(System.in);
+		String sort = scanner2.nextLine();
 
 		Process process = new Process();
 		process.setPlace(place);
 		process.setNum(num);
-		//降順
-		process.resultDown();
-		//昇順
-		process.resultUp();
+		process.setSort(sort);
+		
+		process.result();
+		
 	}
 
 }
