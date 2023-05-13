@@ -30,6 +30,14 @@ public class Qes1_3 {
 		}else {
 			System.out.println("「ユーザー名「 "+ user + "」を登録しました」");
 		}
+		
+		String[] janken = new String[3];
+		janken[0] = "グー"; 
+		janken[1] = "チョキ";
+		janken[2] = "パー";
+		
+		
+		
 	}
 
 }
