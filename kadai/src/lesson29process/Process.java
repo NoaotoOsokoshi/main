@@ -1,7 +1,6 @@
 package lesson29process;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Process {
 	static String[] place;
@@ -39,7 +38,6 @@ public class Process {
 	}
 
 	public void result() {
-		System.out.println(Process.sort);
 		Print print = new Print();
 
 	}
@@ -159,8 +157,7 @@ class Print extends Data {
 				System.out.println("");
 			}
 		} else {
-			System.out.println("数字の後に昇順か降順かを入力してください");
-			Scanner scanner2 = new Scanner(System.in);
+			System.out.println("数字の後に昇順か降順かを入力してやり直してください");
 		}
 	}
 }
