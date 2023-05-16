@@ -63,7 +63,7 @@ public class Object {
 		Scanner scanner = new Scanner(System.in);
 		String line = scanner.nextLine();
 		//","で区切る
-		String[] str = line.split(",");;
+		String[] str = line.split(",");
 
 		int[] num = new int[str.length];
 		//int[]に変換

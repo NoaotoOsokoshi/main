@@ -140,6 +140,8 @@ class Data extends Sort {
  */
 class Print extends Data {
 	public Print() {
+		
+		
 		if (sort.equals("降順")) {
 			//Dataで分けたものを表示(降順)
 			for (int k = 0; k < prefecture.length; k++) {
@@ -147,6 +149,7 @@ class Print extends Data {
 				System.out.println("県庁所在地:" + capital[k]);
 				System.out.println("面積:" + size[k] + "km2");
 				System.out.println("");
+				break;
 			}
 		} else if (sort .equals("昇順")){
 			//Dataで分けたものを表示(昇順)
@@ -155,9 +158,11 @@ class Print extends Data {
 				System.out.println("県庁所在地:" + capital2[k]);
 				System.out.println("面積:" + size2[k] + "km2");
 				System.out.println("");
+				break;
 			}
 		} else {
 			System.out.println("数字の後に昇順か降順かを入力してやり直してください");
 		}
 	}
-}
+	}
+
