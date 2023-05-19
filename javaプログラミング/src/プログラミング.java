@@ -18,6 +18,12 @@ public class プログラミング {
 		String message = "javaを学習しています。";
 		System.out.println(name + message);
 
+		
+		
+		boolean b = true;
+		if(b = false)
+		System.out.println(b);
+		System.out.println(b);
 	}
-
+		
 }
