@@ -84,7 +84,7 @@ public class Qes7 {
 		
 		//　科目ごとの平均
 		// sumAll 全科目の合計
-		int sumAll = 0;
+		double sumAll = 0;
 		
 		for (int i = 0; i < 4; i++) {
 			// ループごとに合計（sumSub）を初期化
@@ -96,7 +96,7 @@ public class Qes7 {
 			System.out.println(subject[i] +"の平均点は"+(String.format("%.2f",sumSub/num)) +"点です。");
 		}
 		
-		
+		System.out.println("全体の平均点は"+String.format("%.2f",sumAll/(num*4))+"点です。");
 	}
 
 }
