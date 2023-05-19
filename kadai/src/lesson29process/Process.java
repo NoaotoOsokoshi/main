@@ -161,7 +161,7 @@ class Print extends Data {
 				
 			}
 		} else {
-			System.out.println("数字の後に昇順か降順かを入力してやり直してください");
+			System.out.println("最初からやり直して,数字の後に昇順か降順かを入力してください");
 		}
 	}
 	}
