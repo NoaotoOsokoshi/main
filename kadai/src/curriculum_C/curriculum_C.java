@@ -36,8 +36,8 @@ public class curriculum_C {
 		janken[1] = "チョキ";
 		janken[2] = "パー";
 
+		
 		int num = 0;
-		int num2 = 0;
 
 		while (true) {
 			// じゃんけん　ユーザー
@@ -49,7 +49,7 @@ public class curriculum_C {
 			int janPc = random2.nextInt(3);
 
 			//回数
-			num2++;
+			num++;
 
 			System.out.println(user + "の手は「" + janken[janUser] + "」");
 			System.out.println("相手の手は「" + janken[janPc] + "」");
@@ -84,13 +84,13 @@ public class curriculum_C {
 				//それ以外（勝った場合）
 			} else {
 				//ループ終了
-				num = 1;
+				
 
 				System.out.println("やるやん");
 				System.out.println("次は俺にリベンジさせて");
 				System.out.println("");
 
-				System.out.println("勝つまでにかかった合計回数は" + num2 + "回です");
+				System.out.println("勝つまでにかかった合計回数は" + num + "回です");
 				break;
 
 			}
