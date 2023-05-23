@@ -96,5 +96,9 @@ public class curriculum_C {
 			}
 		}
 	}
+	
+	public static void Janken2() {
+		
+	}
 
 }

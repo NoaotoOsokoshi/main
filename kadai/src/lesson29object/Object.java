@@ -45,7 +45,6 @@ import lesson29process.Process;
 public class Object {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
 		String[] place = new String[11];
 		place[0] = "北海道:札幌市:83424";
 		place[1] = "青森県:青森市:9646";
@@ -59,19 +58,19 @@ public class Object {
 		place[9] = "群馬県:前橋市:6362";
 		place[10] = "埼玉県:さいたま市:3798";
 
-		//コンソールから獲得 
+		// コンソールから獲得 
 		Scanner scanner = new Scanner(System.in);
 		String line = scanner.nextLine();
-		//","で区切る
+		// ","で区切る
 		String[] str = line.split(",");
 
 		int[] num = new int[str.length];
-		//int[]に変換
+		// int[]に変換
 		for (int i = 0; i < num.length; i++) {
 			num[i] = Integer.parseInt(str[i]);
 		}
 		
-		//昇順か降順かを獲得
+		// 昇順か降順かを獲得
 		Scanner scanner2 = new Scanner(System.in);
 		String sort = scanner2.nextLine();
 
