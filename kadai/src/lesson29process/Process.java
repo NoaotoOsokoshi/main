@@ -1,6 +1,8 @@
 package lesson29process;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Process {
@@ -90,15 +92,23 @@ class Data extends Sort {
 	Double[] size = new Double[sortPlace.length];
 	Double[] size2 = new Double[sortPlace2.length];
 
+	//List list1降順　list2 昇順
+	List<String> list1 = new ArrayList<String>();
+	List<String> list2 = new ArrayList<String>();
+
 	public Data() {
-		// nullチェック 降順
+		// nullチェック 
+
 		if (sortPlace != null) {
 			for (int j = 0; j < sortPlace.length; j++) {
 				//  ":"で分ける　[0]都道府県　[1]県庁所在地　[2]面積
 				String[] data = sortPlace[j].split(":");
-				prefecture[j] = data[0];
-				capital[j] = data[1];
-				size[j] = Double.parseDouble(data[2]);
+				// list1に追加
+				list1.add("都道府県名：" + data[0]);
+				list1.add("県庁所在地：" + data[1]);
+				list1.add("面積：" + Double.parseDouble(data[2]) + "km2");
+				list1.add("");
+
 			}
 		} else {
 			System.out.println("エラー");
@@ -109,9 +119,11 @@ class Data extends Sort {
 			for (int j = 0; j < sortPlace2.length; j++) {
 				// ":"で分ける　[0]都道府県　[1]県庁所在地　[2]面積
 				String[] data = sortPlace2[j].split(":");
-				prefecture2[j] = data[0];
-				capital2[j] = data[1];
-				size2[j] = Double.parseDouble(data[2]);
+				// list2に追加
+				list2.add("都道府県名：" + data[0]);
+				list2.add("県庁所在地：" + data[1]);
+				list2.add("面積：" + Double.parseDouble(data[2]) + "km2");
+				list2.add("");
 			}
 		} else {
 			System.out.println("エラー");
@@ -130,33 +142,23 @@ class Data extends Sort {
  */
 class Print extends Data {
 	public Print() {
-		int num = 0;
 		String sort2 = null;
-
-		while (num == 0)
+		// while　breakでループを抜ける
+		do {
 			if (sort.equals("降順")) {
-				// Dataで分けたものを表示(降順)
-				for (int k = 0; k < prefecture.length; k++) {
-					System.out.println("都道府県名：" + prefecture[k]);
-					System.out.println("県庁所在地:" + capital[k]);
-					System.out.println("面積:" + size[k] + "km2");
-					System.out.println("");
-					num = 1;
-				}
+				// list1 表示
+				list1.forEach(System.out::println);
+				break;
 			} else if (sort.equals("昇順")) {
-				// Dataで分けたものを表示(昇順)
-				for (int k = 0; k < prefecture2.length; k++) {
-					System.out.println("都道府県名：" + prefecture2[k]);
-					System.out.println("県庁所在地:" + capital2[k]);
-					System.out.println("面積:" + size2[k] + "km2");
-					System.out.println("");
-					num = 1;
-				}
+				// list2　表示
+				list2.forEach(System.out::println);
+				break;
 			} else {
 				System.out.println("昇順か降順かを入力してください");
 				Scanner scanner2 = new Scanner(System.in);
 				sort2 = scanner2.nextLine();
 				sort = sort2;
 			}
+		} while (true);
 	}
 }
