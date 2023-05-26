@@ -18,6 +18,7 @@ public class Person {
 		this.weight = weight;
 		Person.count = count+1; 
 		print();
+		System.out.println("合計"+count+"人です");
 	}
 
 	
@@ -31,13 +32,12 @@ public class Person {
 		return this.BMI = BMI;
 	}
 
-	// 表示
+	// メッソド　戻り値:void
 	public void print() {
 		bmi();
 		System.out.println("名前は" + this.name + "です");
 		System.out.println("年は" + this.age + "です");
 		System.out.println("BMIは" + String.format("%.1f", this.BMI) + "です");
-		System.out.println("合計"+count+"人です");
 	}
 }
 
