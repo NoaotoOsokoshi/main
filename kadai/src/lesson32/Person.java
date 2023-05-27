@@ -1,10 +1,10 @@
 package lesson32;
 
 class Person {
-	public String name;
-	public int age;
-	public double height;
-	public double weight;
+	private String name;
+	private int age;
+	private double height;
+	private double weight;
 
 	//getter
 	public String getName() {
@@ -46,20 +46,20 @@ class Person {
 		this.weight = weight;
 	}
 
-	static int count;
+	static int count = 0;
 
-	//コンストラクタ
+	// コンストラクタ
 	Person(String name, int age, double height, double weight) {
 		this.name = name;
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
-		Person.count = count+1; 
+		Person.count = count++;
 	}
 
 	//bmi 計算
 	public double bmi() {
-		return this.weight / this.height / this.height;
+		return this.weight / (this.height * this.height);
 	}
 
 	//表示
@@ -67,11 +67,10 @@ class Person {
 		System.out.println("名前は" + this.name + "です");
 		System.out.println("年は" + this.age + "です");
 	}
-	
+
+	// メソッド　戻り値　void
 	public void printCount() {
-		System.out.println("合計"+count+"人です");
+		System.out.println("合計" + count + "人です");
 	}
 
-	
-	
 }
