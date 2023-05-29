@@ -1,51 +1,11 @@
 package lesson32;
 
 class Person {
-	private String name;
-	private int age;
-	private double height;
-	private double weight;
-
-	//getter
-	public String getName() {
-		return name;
-	}
-
-	//setter
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	//getter
-	public int getAge() {
-		return age;
-	}
-
-	//setter
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	//getter
-	public double getHeight() {
-		return height;
-	}
-
-	//setter
-	public void setHeight(double height) {
-		this.height = height;
-	}
-
-	//getter
-	public double getWeight() {
-		return weight;
-	}
-
-	//setter
-	public void setWeight(double weight) {
-		this.weight = weight;
-	}
-
+	public String name;
+	public int age;
+	public double height;
+	public double weight;
+	// count　定義　int 初期値:0
 	static int count = 0;
 
 	// コンストラクタ
@@ -54,22 +14,23 @@ class Person {
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
+		// count 処理ごとにプラス1
 		count++;
 	}
 
-	//bmi 計算
+	// bmi 計算
 	public double bmi() {
 		return this.weight / (this.height * this.height);
 	}
 
-	//表示
+	// 表示
 	public void print() {
 		System.out.println("名前は" + this.name + "です");
 		System.out.println("年は" + this.age + "です");
 	}
 
-	// メソッド　戻り値　void
-	public void printCount() {
+	// クラスメソッド　戻り値　void
+	public static void printCount() {
 		System.out.println("合計" + count + "人です");
 	}
 
