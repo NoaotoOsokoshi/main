@@ -54,7 +54,7 @@ class Person {
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
-		Person.count = count++;
+		count++;
 	}
 
 	//bmi 計算
