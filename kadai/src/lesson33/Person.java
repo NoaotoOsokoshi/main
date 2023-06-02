@@ -3,10 +3,10 @@ package lesson33;
 class Person {
 	public static int count = 0;
 	public String firstName;
-	public int age;
-	public double height, weight;
 	// 問１　lastName 追加
 	public String lastName;
+	public int age;
+	public double height, weight;
 
 	Person(String firstName, String lastName, int age, double height, double weight) {
 		// 問3　追加
