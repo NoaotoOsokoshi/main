@@ -22,6 +22,7 @@ public class curriculum_C {
 		} else {
 			System.out.println("「ユーザー名「 " + user + "」を登録しました」");
 			Janken(user);
+			Janken2(user);
 		}
 
 	}
@@ -42,6 +43,7 @@ public class curriculum_C {
 		//勝敗
 		String battle = null;
 
+		
 		while (true) {
 			// じゃんけん　ユーザー
 			Random random = new Random();
@@ -87,7 +89,6 @@ public class curriculum_C {
 				// それ以外（勝った場合）
 			} else {
 				// ループ終了
-				battle = "win";
 				System.out.println("やるやん");
 				System.out.println("次は俺にリベンジさせて");
 				System.out.println("");
@@ -121,6 +122,10 @@ public class curriculum_C {
 			System.out.println("相手の手は「" + direction[janPc2] + "」");
 			System.out.println("あなたの勝ち");
 			System.out.println("勝つまでにかかった合計回数は" + num + "回です");
+		}else {
+			System.out.println(user + "の手は「" + direction[janUser2] + "」");
+			System.out.println("相手の手は「" + direction[janPc2] + "」");
+			System.out.println("");
 		}
 
 	}
