@@ -25,7 +25,9 @@ public class curriculum_C {
 		}
 
 	}
-
+	
+	static int num = 0;
+	
 	// メソッド　じゃんけん
 	public static void Janken(String user) {
 
@@ -36,7 +38,7 @@ public class curriculum_C {
 		janken[2] = "パー";
 
 		// 回数
-		int num = 0;
+		
 		//勝敗
 		String battle = null;
 
