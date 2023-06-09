@@ -22,14 +22,13 @@ public class Qes5 {
 	
 	 */
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
+		// int 000で表示
 		Format f = new DecimalFormat("000");
 		for (int i = 1; i <= 9; i++) {
 			for (int j = 1; j <= 19; j++) {
 				System.out.print(f.format(j) + " * " + f.format(i) + " = " + f.format(i * j) + " || ");
 			}
-			System.out.print(f.format(20) + " * " + f.format(1) + " = " + f.format(i * 20));
-			System.out.println("");
+			System.out.println(f.format(20) + " * " + f.format(1) + " = " + f.format(i * 20));
 		}
 	}
 }

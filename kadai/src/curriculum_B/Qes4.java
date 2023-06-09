@@ -5,9 +5,8 @@ import java.text.Format;
 
 public class Qes4 {
 	/*
-	 * 	for文を使用して下記の通りに出力してください									
-											
-		※この行は改行しているとする									
+	 * 	for文を使用して下記の通りに出力してください	
+	 * ※この行は改行しているとする									
 		-------------------課題4-------------------									
 		01 * 01 = 01 || 01 * 02 = 02 || 01 * 03 = 03 || 01 * 04 = 04 || 01 * 05 = 05 || 01 * 06 = 06 || 01 * 07 = 07 || 01 * 08 = 08 || 01 * 09 = 09									
 		02 * 01 = 02 || 02 * 02 = 04 || 02 * 03 = 06 || 02 * 04 = 08 || 02 * 05 = 10 || 02 * 06 = 12 || 02 * 07 = 14 || 02 * 08 = 16 || 02 * 09 = 18									
@@ -22,15 +21,15 @@ public class Qes4 {
 	 */
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
-		//int 01で表示
+		// int 01で表示
 		Format f = new DecimalFormat("00");
+		// for文で繰り返し
 		for(int i = 1; i <= 9; i++) {
 			for( int j = 1; j<= 8; j++) {
 				System.out.print(f.format(i)+" * " + f.format(j)+" = "+f.format(i*j) + " || ");
 			}
-			System.out.print(f.format(i)+" * " + f.format(9)+" = "+f.format(i*9));
-			System.out.println("");
+			// 最後だけ"||"なし
+			System.out.println(f.format(i)+" * " + f.format(9)+" = "+f.format(i*9));
 		}
 	}
 
