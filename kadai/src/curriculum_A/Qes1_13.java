@@ -32,7 +32,7 @@ public class Qes1_13 {
 		in = 0;
 		lo = 0L;
 		fl = 0.0f;
-		dou = 0.0;
+		dou = 0.0d;
 		ch = '\u0000';
 		str = null;
 		bo = false;
@@ -55,7 +55,7 @@ public class Qes1_13 {
 		in = 1000;
 		lo = 10000L;
 		fl = 9.5f;
-		dou = 10.5;
+		dou = 10.5d;
 		ch = 'a';
 		str = "ハロー";
 		bo = true;
@@ -73,7 +73,7 @@ public class Qes1_13 {
 		 * -90		            -90 	        10引く100をする
 		 */
 		System.out.println(by + sh + in + lo);
-		System.out.println((int) (fl + dou));
+		System.out.println((int)(fl + dou));
 		System.out.println(ch + " " + str + " " + bo);
 		System.out.println(by * sh * in * lo);
 		System.out.println(dou / sh);
@@ -190,7 +190,7 @@ public class Qes1_13 {
 		int intAge = Integer.valueOf(strAge);
 		System.out.println(intAge);
 		double douHeight = Double.parseDouble(strHeight);
-		int intHeight = (int) douHeight;
+		int intHeight = (int)douHeight;
 		System.out.println(intHeight + "\n");
 
 		/*
