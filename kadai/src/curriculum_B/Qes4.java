@@ -26,10 +26,10 @@ public class Qes4 {
 		// for文で繰り返し
 		for(int i = 1; i <= 9; i++) {
 			for( int j = 1; j<= 8; j++) {
-				System.out.print(f.format(i)+" * " + f.format(j)+" = "+f.format(i*j) + " || ");
+				System.out.print(f.format(i)+" * " + f.format(j)+" = "+ f.format(i*j) + " || ");
 			}
 			// 最後だけ"||"なし
-			System.out.println(f.format(i)+" * " + f.format(9)+" = "+f.format(i*9));
+			System.out.println(f.format(i)+" * " + f.format(9)+" = "+ f.format(i*9));
 		}
 	}
 
