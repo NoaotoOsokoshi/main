@@ -22,6 +22,7 @@ public class arrangement2 {
 	           h
 	           j
 	*/
+	
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 		String[] word = new String[10];
